@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Devs";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="reactTableContainer"></div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/js/Devs/devsWebAPI.js" asp-append-version="true"></script>
+    <script src="~/js/Devs/index.js" asp-append-version="true"></script>
+    <script>
+        reactDevs.renderReactDevs();
+    </script>
+}

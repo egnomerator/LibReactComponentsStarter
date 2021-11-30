@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Update="wwwroot\app\dist\bundle\bundle.js">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Update="wwwroot\app\dist\bundle\vendors.js">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	
+	<Target Name="NpmCI" Inputs="package.json" Outputs="node_modules/.install-stamp">
+		<Exec Command="npm ci" />
+		<!-- Write the stamp file, so incremental builds work -->
+		<Touch Files="node_modules/.install-stamp" AlwaysCreate="true" />
+	</Target>
+
+	<Target Name="NpmRunBuild" DependsOnTargets="NpmCI" BeforeTargets="BeforeBuild">
+		<Exec Command="npm run dev" Condition="'$(Configuration)'!='Release'" />
+		<Exec Command="npm run prod" Condition="'$(Configuration)'=='Release'" />
+	</Target>
+	
+</Project>
