@@ -8,7 +8,7 @@ export class TrEditorCell extends React.Component<TrEditorCellProps> {
 
     render() {
         return <td>
-            <button onClick={this.props.view}>View</button>{" "}
+            <button onClick={this.props.view}>Details</button>{" "}
             <button onClick={this.props.edit}>Edit</button>{" "}
             <button onClick={this.props.delete}>Delete</button>
         </td>
