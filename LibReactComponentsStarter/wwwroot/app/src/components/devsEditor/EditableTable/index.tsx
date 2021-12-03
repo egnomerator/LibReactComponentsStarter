@@ -1,5 +1,4 @@
-﻿import { nanoid } from "nanoid";
-import * as React from "react";
+﻿import * as React from "react";
 import { EditableTr } from "../EditableTr";
 import { EditableTableProps } from "./props";
 
@@ -23,7 +22,7 @@ export class EditableTable extends React.Component<EditableTableProps> {
                         ? <tr><td colSpan={3} className="text-center" >There are no devs.</td></tr>
                         : this.props.devs.map((dev) =>
                             <EditableTr
-                                key={nanoid()}
+                                key={dev.id}
                                 dev={dev}
                                 view={this.props.view}
                                 edit={this.props.edit}
