@@ -37,9 +37,14 @@ export class DevsEditor extends React.Component<DevsEditorProps, DevsEditorState
             <div className="h2" style={{ display: "inline" }}>
                 React Editable Table Area{" "}
             </div>
-            <a className="btn btn-primary" style={{ display: "inline" }} onClick={this.refreshTable}>
-                Refresh
-            </a>
+            <div className="h4" style={{ display: "inline" }}>
+                Edit developers{" "}
+            </div>
+            <div>
+                <a className="btn btn-primary" onClick={this.refreshTable}>
+                    Refresh
+                </a>
+            </div>
             <p></p>
             <CreateDev nextId={this.state.nextId} nextIdIsKnown={this.state.devs !== null} save={this.save} />
             <EditableTable

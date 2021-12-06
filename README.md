@@ -9,7 +9,7 @@ My "template" starter app for bringing React--as a component library--into a .NE
 1. Observe the new web page load with a table
 1. preform CRUD operations on the table data
 
-## What is this "Devs" web page?
+## What is this "React Editable Table Area" web page?
 
 - it is entirely rendered and controlled by a set of React components
 - a React component uses jQuery Ajax for HTTP-initiated CRUD operations
@@ -17,12 +17,13 @@ My "template" starter app for bringing React--as a component library--into a .NE
 - the global API is used to trigger an initial render of the React components
     - a reference to a webAPI object that uses jQuery Ajax is passed into the API for React to use
 
-## What is this "Devs" web page? (**details**)
+## What is this "React Editable Table Area" web page? (**details**)
 
 - React components
     - a set of React components comprises everything in the main page area (between the nav bar and the footer)--this includes:
     - the "React" label and "Refresh" button
     - the 3-fields and labels ("Next Id", "First Name", "Last Name") and "Save Dev" button to create a new Dev
+        - why devs? ... there's no good reason lol it's really just a list of objects with first name, last name, and id
     - the table displaying the Devs
     - "Dev Details" label and value (which displays something when you click a "View" button)
     - "Ajax Result" label and value (which displays something whenever an Ajax request is made)
