@@ -3,10 +3,10 @@
   "name": "aspnetcoremvc-jquery-to-react",
   "private": true,
   "scripts": {
-    "prod": "npm run typescheck && webpack --mode=production",
-    "dev": "npm run typescheck && webpack --mode=development",
+    "prod": "npm run typescheck && SET NODE_OPTIONS=--openssl-legacy-provider && webpack --mode=production",
+    "dev": "npm run typescheck && SET NODE_OPTIONS=--openssl-legacy-provider && webpack --mode=development",
     "test": "npm run typescheck && jest",
-    "devw": "npm run tscwatch -- --onSuccess \"webpack --mode=development\"",
+    "devw": "npm run tscwatch -- --onSuccess \"SET NODE_OPTIONS=--openssl-legacy-provider && webpack --mode=development\"",
     "testw": "npm run tscwatch -- --onSuccess jest",
     "tscwatch": "tsc-watch -p ./tsconfig.bld.json",
     "typescheck": "tsc -p ./tsconfig.bld.json",
