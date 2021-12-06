@@ -9,6 +9,12 @@ My "template" starter app for bringing React--as a component library--into a .NE
 1. Observe the new web page load with a table
 1. preform CRUD operations on the table data
 
+**note:** if you get a "digital envelope" error during build
+
+- this is an error thrown during Webpack build running on Node.js version 17.0.1 (this is the version I saw it on)
+    - I THINK that this error starts appearing in Node.js version 17+ but not totally sure
+- FIX: look at branch "build-error-digital-envelop" which only has changes in the package.json file scripts to fix this
+
 ## What is this "React Editable Table Area" web page?
 
 - it is entirely rendered and controlled by a set of React components
