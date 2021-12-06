@@ -35,7 +35,7 @@ export class DevsEditor extends React.Component<DevsEditorProps, DevsEditorState
     render() {
         return <div>
             <div className="h2" style={{ display: "inline" }}>
-                React{" "}
+                React Editable Table Area{" "}
             </div>
             <a className="btn btn-primary" style={{ display: "inline" }} onClick={this.refreshTable}>
                 Refresh

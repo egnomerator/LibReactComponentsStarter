@@ -6,7 +6,6 @@ My "template" starter app for bringing React--as a component library--into a .NE
 
 1. Clone the Repo
 1. run the app in debug mode (IMPORTANT! just a heads-up--the first time will take about a minute or so, because it installs NPM packages)
-1. Click "Devs" in the nav bar menu of the web app
 1. Observe the new web page load with a table
 1. preform CRUD operations on the table data
 
