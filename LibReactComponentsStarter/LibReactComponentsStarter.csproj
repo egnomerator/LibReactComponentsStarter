@@ -6,6 +6,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<TypeScriptCompile Remove="wwwroot\app\src\**" />
 		<TypeScriptCompile Remove="node_modules\**" />
 	</ItemGroup>
 	<ItemGroup>
